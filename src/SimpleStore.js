@@ -72,7 +72,9 @@ const SimpleStore = () => {
         <button type="submit">submit</button>
       </form>
 
-      <button onClick={getCurrentVal}>Get Current Value</button>
+      <button onClick={getCurrentVal}>
+        Get Current Value: {currentContractVal}
+      </button>
 
       {errorMessage}
     </div>
