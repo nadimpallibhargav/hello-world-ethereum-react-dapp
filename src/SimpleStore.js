@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import SimpleStorage_abi from "./SimpleStorage_abi.json";
 
 const SimpleStore = () => {
-  let contractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
+  let contractAddress = "0x358AA13c52544ECCEF6B0ADD0f801012ADAD5eE3";
 
   const [errorMessage, setErrorMessage] = useState(null);
   const [defaultAccount, setDefaultAccount] = useState(null);
@@ -22,6 +22,7 @@ const SimpleStore = () => {
         .then((result) => {
           accountChangedHandler(result[0]);
           setConnButtonText("wallet connected");
+          updateEthers();
         })
         .catch((err) => {
           setErrorMessage(err.message);
@@ -37,7 +38,7 @@ const SimpleStore = () => {
   };
 
   const updateEthers = () => {
-    let tempProvider = new ethers.providers.web3Provider(window.ethereum);
+    let tempProvider = new ethers.providers.Web3Provider(window.ethereum);
     setProvider(tempProvider);
 
     let tempSigner = tempProvider.getSigner();
@@ -69,12 +70,12 @@ const SimpleStore = () => {
 
       <form onSubmit={setHandler}>
         <input id="setText" type="text" />
-        <button type="submit">submit</button>
+        <button type={"submit"}>submit</button>
       </form>
 
-      <button onClick={getCurrentVal}>
-        Get Current Value: {currentContractVal}
-      </button>
+      <button onClick={getCurrentVal}>Get Current Value:</button>
+
+      {currentContractVal}
 
       {errorMessage}
     </div>
@@ -82,3 +83,6 @@ const SimpleStore = () => {
 };
 
 export default SimpleStore;
+
+// 0x49d7bcca3e217b22574395391e03fedfd740bf8029af0e3f11c8e65a1d2c54b8;
+// 0xdb13b13b527c13b106028085489289b5073ad22ae96939ba4ba289c89fbb99ff;
