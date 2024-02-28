@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import SimpleStorage_abi from "./SimpleStorage_abi.json";
 
 const SimpleStore = () => {
-  let contractAddress = "0x358AA13c52544ECCEF6B0ADD0f801012ADAD5eE3";
+  let contractAddress = "0xa84b090f3bdDeB498d661AB2682872E9c35760F2";
 
   const [errorMessage, setErrorMessage] = useState(null);
   const [defaultAccount, setDefaultAccount] = useState(null);
@@ -84,6 +84,12 @@ const SimpleStore = () => {
 
 export default SimpleStore;
 
+// transaction history list
 // 0x49d7bcca3e217b22574395391e03fedfd740bf8029af0e3f11c8e65a1d2c54b8;
 // 0xdb13b13b527c13b106028085489289b5073ad22ae96939ba4ba289c89fbb99ff;
 // 0x458a3c0acbba90b523f4d85be30870ae12b41887ef747c2164d1df74c9a466d3;
+// 0x52d21f75e012e912ad7c3d405fc0f6c1b627b17dbc0c32d9620d75cb323b2e9a;
+// 0xb595407a7002023eea2f8b848946cb37b7a03cf46d47a043cfd38511ed92d4ce;
+// 0x1fc0cc359b03e14eb903434f2114089dd214474c1a68521fc12157fa20a93512;
+// 0x5a719e29e2d569b2f70dfb7ba2a49128d6d13507e0a7d354e1a00d44b31c137a
+// 0xe2d80bce7f4150d2b677a2ab45fdc7e1894c4adbfb1db1d8009f9f6f8b670bbc;
